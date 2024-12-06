@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap'); 
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+ 
+
+
+:root{
+  --bg-color: #0c0c0c ;
+  --text-color: #fff ;
+  --main-color:#ae8957;
+  --p-size: 1rem;
+  --big-size: 4.9rem;
+}
+
+
+.bg{
+  background-color:var(--bg-color);
+  color:var(--text-color)
+}
+
+body{
+  background-color:var(--bg-color);
+  color:var(--text-color)
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+} 
+
+
+/* NAVBAR */
+
+
+
+
+
+
+.links{
+
+  display: inline-block;
+  margin: 0 35px;
+  /* color:var(--text-color); */
+  font-size:var(--p-size);
+  transition: all 0.6s ease;
+}
+
+.links:hover {
+  color: var(--main-color);
+}
+
+
+
+/* ---------------------------------- */
+
+/* signup */
+
+.borders{
+  border: 2px solid var(--text-color);
+  border-radius: 7px ;
+  color:var(--text-color);
+  font-size: 15px;
+  font-weight:500;
+  transition: all 0.6s ease ;
+}
+
+.borders:hover{
+
+  transform:translateY(-5px);
+  border:2px solid var(--main-color);
+  color: var(--main-color);
+  
+}
+
+.hamburger{
+  font-size: 42px;
+  z-index: 10001;
+  cursor: pointer;
+  margin-left: 25px ;
+}
+
+/* ---------------------------------- */
+
+/* hero */
+
+.padding1{
+  padding: 0 14%;
+/*         x   y */
+}
+
+.bgimg{
+  background-image: url(/bg.png);
+  background-position: center;
+  background-size: cover ;
+
+
+}
+
+body{
+  background-image: url(/bg.png);
+  background-size: cover ;
+ 
+ 
+}
+
+.gridd{
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem ;
+}
+
+/* -------------------------------------------------------- */
+
+/* links */
+
+.icons{
+  display: block;
+  margin: 35px 0;
+  color:var(--text-color);
+  font-size: 23px;
+  transition: all 0.6s;
+  scale: 1.2 ;
+}
+
+.icons:hover{
+  transform: translateY(-5px);
+  color: var(--main-color);
+}
+
+/* ------------------------------------------------------------- */
+
+/* about page */
+
+.grd{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 3;
+  align-items: center;
+  justify-content: center;
+  
+  
+}
+
+/* .imgAnimation {
+  animation: up-down 4s 4s 2s infinite normal;
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  75% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+} */
+
+.imgAnimation {
+  animation: up-down 3s ease-in-out infinite;
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }}
+  
+
+
+  /* ---------------------------------------------------------------------- */
+  /* contact page */
+
+
+
+
+ /* ---------------------------------------------------------------------- */
