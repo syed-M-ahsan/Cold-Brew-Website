@@ -162,18 +162,14 @@ body{
 
 body{
   background-image: url(/bg.png);
-  background-size: cover ;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+   ;
  
  
 }
 
-.gridd{
-
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  gap: 2rem ;
-}
 
 /* -------------------------------------------------------- */
 

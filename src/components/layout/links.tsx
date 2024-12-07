@@ -13,14 +13,24 @@ const Links = () => {
         lg:translate-y-[-50] 
         lg:-mt-16 
         lg:block
-        lg:ml-0
+        lg:-ml-12
         lg:gap-0
         
          md:top-[85%]
          md:flex
-         md:gap-28
-         md:ml-56
+         md:gap-x-28
+         md:justify-center
          md:items-center 
+
+         sm:flex
+         sm:item-center
+         sm:gap-x-14
+         sm:justify-center
+
+         flex
+         items-center
+         gap-x-7
+         justify-center
         
         '>
             <Link href={"/"} className='icons '><FacebookIcon /></Link>

@@ -81,12 +81,28 @@ export default function Order() {
 
 
   return (
-    <div className="grid grid-cols-[repeat(3,minmax(0,400px))] gap-4 justify-center items-center mt-32 mb-10  lg:grid-[repeat(2,minmax(0,400px))] ">
+    <div className="select-none
+    md:grid 
+    lg:grid-cols-3
+    
+    md:grid-cols-2
+    lg:gap-4 
+    lg:justify-center 
+    lg:items-center 
+    lg:mt-32 
+    lg:mb-10  
+
+    sm:block
+    block
+
+    
+     ">
        {menuData.map((coffeeMenu)=>{
         return(
           
           <div className='' key={coffeeMenu.id}>
-          <div className='grid gird-cols-[minmax(0,400px)] items-center justify-center lg:gird-cols-[minmax(0,300px)] '>
+          <div className='grid items-center justify-center md:gird-cols-2
+          py-4  '>
                 <div className='bg-[#241a16] rounded-3xl p-3'>
                 <div > <Image src={coffeeMenu.image.src} alt={coffeeMenu.image.alt} height={250} width={300}  className='rounded-full drop-shadow-[2px 2px 2px white ] p-6'/></div>
                 <div> <p className=' font-bold text-mcolor'>{coffeeMenu.flavour}</p> </div>

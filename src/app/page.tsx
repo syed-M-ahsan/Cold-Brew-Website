@@ -8,11 +8,31 @@ import Order from "./order/page";
 
 export default function Home() {
   return (
-    <div className=" ">
+    <div className=" overflow-x-hidden select-none ">
       <main>
-        <section className="padding1  w-full h-screen  gridd -mt-24  ">
+        <section className="
+        lg:padding1
+        lg:w-full
+        lg:h-screen  
+        lg:grid 
+        lg:grid-cols-2 
+        lg:items-center 
+        lg:gap-2 
+        lg:-mt-24 
+        
+        md:block
+        md:mt-12
+        md:ml-12
+
+        sm:block
+        sm:mt-12
+
+        block
+        ml-10
+        mt-8
+        ">
           {/* 9-19 */}
-          <div className="">
+          <div className="lg:pl-24 mg:pl-8 sm:pl-10">
             <h5 className="text-[18px] font-normal tracking-[1px] ">
               #Coffee for hot days
             </h5>
@@ -20,7 +40,7 @@ export default function Home() {
               <span>$ Cold </span>
               <span>Brew</span> 
             </h1>
-            <p className="w-full max-w-[620px] text-sml font-normal leading-[32px] text-tcolor mb-[40px]">
+            <p className="w-full max-w-[620px] md:text-sml font-normal leading-[32px] text-tcolor mb-[40px] text-xs  sm:m-0 sm:pr-0 pr-10">
               
               boots your productivity and build your mood with a glass of coffee
               in the morning .Coffee that has a Stimulating effect!
@@ -29,17 +49,29 @@ export default function Home() {
             <div className="flex items-center">
               <Link
                 href={"/order"}
-                className=" inline-block py-[13px]  px-[32px] bg-mcolor border-2 border-solid border-transparent rounded-[7px] text-tcolor text-sm font-medium transition-all duration-[.6sec] ease-in-out mr-[20px] hover:scale-110 lg:text-xs lg:py-3 lg:px-5 "
+                className=" block bg-mcolor border-2 border-solid border-transparent rounded-[7px] text-tcolor sm:text-sm font-medium transition-all duration-[.6sec] ease-in-out mr-[20px] hover:scale-110    
+                lg:text-xs 
+                lg:py-3 
+                lg:px-5
+                
+                md:mt-6
+                sm:py-[13px]
+                sm:px-[32px]
+                
+                py-2
+                px-2
+                text-[10px]
+                "
               >
                 Order Now
               </Link>
 
               <Link
-                href={"/"}
-                className="flex items-center text-[24px] font-bold text-tcolor "
+                href={"/order"}
+                className="flex items-center sm:text-[24px] font-bold text-tcolor text-xs md:mt-6 "
               >
                 $16.00 |
-                <span className="text-[17px] font-normal text-mcolor ml-[10px] lg:text-sm">
+                <span className="text-[17px] font-normal text-mcolor ml-[10px] sm:text-sm text-xs">
                   
                   Discounted price
                 </span>
@@ -50,9 +82,17 @@ export default function Home() {
             <Image
               src={"/hero.png"}
               alt="hero image"
-              height={700}
-              width={550}
-              className="w-full h-auto"
+              height={400}
+              width={400}
+              className="
+              object-contain
+               w-full 
+               max-h-[400px]
+              -ml-6
+              "
+               
+
+              
             />
           </div>
         </section>
